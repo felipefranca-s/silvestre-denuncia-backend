@@ -1,4 +1,4 @@
-package com.projetosd.projetosd.restaurantes.pratos;
+package com.projetosd.projetosd.pratos;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

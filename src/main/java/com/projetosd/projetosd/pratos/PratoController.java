@@ -1,4 +1,4 @@
-package com.projetosd.projetosd.restaurantes.pratos;
+package com.projetosd.projetosd.pratos;
 
 import java.util.List;
 import java.util.Optional;
