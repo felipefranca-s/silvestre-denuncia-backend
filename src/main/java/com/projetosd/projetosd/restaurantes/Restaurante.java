@@ -1,12 +1,17 @@
 package com.projetosd.projetosd.restaurantes;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+import com.projetosd.projetosd.restaurantes.pratos.Prato;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 // @Data 				// Cria os getters e setters, tava retornando vazio o request
@@ -29,6 +34,9 @@ public class Restaurante {
 	private String local;
 	
 	private String tipo;
+	
+	@OneToMany(mappedBy = "restaurante", targetEntity = Prato.class, cascade = CascadeType.ALL)
+	private List<Prato> pratos;	
 
 	public Long getId() {
 		return id;
@@ -61,5 +69,12 @@ public class Restaurante {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
+	public List<Prato> getPratos() {
+		return pratos;
+	}
 
+	public void setPratos(List<Prato> pratos) {
+		this.pratos = pratos;
+	}
 }
