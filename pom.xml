@@ -8,11 +8,11 @@
 		<version>2.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.projetosd</groupId>
-	<artifactId>projeto-sd</artifactId>
+	<groupId>com.silvestre-denuncia</groupId>
+	<artifactId>silvestre-denuncia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>projeto-sd</name>
-	<description>Projeto para a aula de Spring Boot</description>
+	<name>silvestre-denuncia</name>
+	<description>Aps 8 sem</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -20,6 +20,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -1,4 +1,4 @@
-package com.projetosd.projetosd.restaurantes;
+package com.silvestre.silvestre.statusDenuncias;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,37 +16,37 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("/restaurantes")
+@RequestMapping("/statusDenuncias")
 @AllArgsConstructor
-public class RestauranteController {
+public class StatusDenunciaController {
 
-	@Autowired // Injeta a dependencia
-	RestauranteRepository repository;
+	@Autowired
+	StatusDenunciaRepository repository;
 	
 	@GetMapping("/retornaTodos")
-	List<Restaurante> todosRestaurantes(){
+	List<StatusDenuncia> todosStatusDenuncias(){
 		return repository.findAll();
 	}
 	
 	@PostMapping("/novo")
-	Restaurante novoRestaurante(@RequestBody Restaurante restaurante) {
-		return repository.save(restaurante); // ja cria e retorna				
+	StatusDenuncia novoStatusDenuncia(@RequestBody StatusDenuncia statusDenuncia) {
+		return repository.save(statusDenuncia);
 	}
 	
 	@GetMapping("/{id}")
-		Optional<Restaurante> retornaRestaurante(@PathVariable Long id) {
+		Optional<StatusDenuncia> retornaStatusDenuncia(@PathVariable Long id) {
 			return repository.findById(id);
 		}
 	
 	@PutMapping("/{id}")
-	Restaurante atualiza(@RequestBody Restaurante restaurante, @PathVariable Long id) {
+	StatusDenuncia atualizaStatusDenucia(@RequestBody StatusDenuncia statusDenuncia, @PathVariable Long id) {
 		
-		restaurante.setId(id);
-		return repository.save(restaurante);
+		statusDenuncia.setId(id);
+		return repository.save(statusDenuncia);
 	}
 	
 	@DeleteMapping("/deleta/{id}")
-		void deletaRestaurante(@PathVariable Long id) {
+		void deletaStatusDenuncia(@PathVariable Long id) {
 			repository.deleteById(id);
 		}	
 }
