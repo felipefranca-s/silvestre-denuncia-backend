@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.silvestre.silvestre.atualizacoes.Atualizacao;
 import com.silvestre.silvestre.evidencias.Evidencia;
+import com.silvestre.silvestre.imagens.Imagem;
 import com.silvestre.silvestre.statusDenuncias.StatusDenuncia;
 
 import lombok.AllArgsConstructor;
@@ -48,8 +49,8 @@ public class Denuncia {
 	@OneToMany(mappedBy = "denuncia", targetEntity = Atualizacao.class, cascade = CascadeType.ALL)
 	private List<Atualizacao> atualizacoes;
 
-	@OneToMany(mappedBy = "denuncia", targetEntity = Evidencia.class, cascade = CascadeType.ALL)
-	private List<Evidencia> evidencias;
+	@OneToMany(mappedBy = "denuncia", targetEntity = Imagem.class, cascade = CascadeType.ALL)
+	private List<Imagem> imagens;
 
 	// Getters e setters
 
@@ -133,11 +134,11 @@ public class Denuncia {
 		this.atualizacoes = atualizacoes;
 	}
 
-	public List<Evidencia> getEvidencias() {
-		return evidencias;
+	public List<Imagem> getImagens() {
+		return imagens;
 	}
 
-	public void setEvidencias(List<Evidencia> evidencias) {
-		this.evidencias = evidencias;
-	}
+	public void setImagens(List<Imagem> imagens) {
+		this.imagens = imagens;
+	}	
 }
