@@ -102,9 +102,9 @@ public class ImagemController {
 		}		
 		return null;
 	}
+
 	
-	@DeleteMapping("/deleta/{id}")
-	void deletaImagem(@PathVariable Long id) {
-		repository.deleteById(id);
+	@DeleteMapping("/deletaPorDenunciaId/{id}")
+	void deletaImagemPorDenunciaId(@PathVariable Long id) {			repository.deleteById(id);
 	}
 }
