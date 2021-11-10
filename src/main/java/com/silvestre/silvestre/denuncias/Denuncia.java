@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.silvestre.silvestre.atualizacoes.Atualizacao;
-import com.silvestre.silvestre.evidencias.Evidencia;
 import com.silvestre.silvestre.imagens.Imagem;
 import com.silvestre.silvestre.statusDenuncias.StatusDenuncia;
 
